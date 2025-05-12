@@ -1,0 +1,55 @@
+/* Solarized Light */
+:root {
+    --base03: #002b36;
+    --base02: #073642;
+    --base01: #586e75;
+    --base00: #657b83;
+    --base0: #839496;
+    --base1: #93a1a1;
+    --base2: #eee8d5;
+    --base3: #fdf6e3;
+    --yellow: #b58900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --blue: #268bd2;
+    --cyan: #2aa198;
+    --green: #859900;
+}
+
+body {
+    font-family: "Source Code Pro", "SF Mono", "Menlo", monospace;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--base3);
+    color: var(--base03);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: var(--blue);
+    font-weight: normal;
+    border-bottom: 1px solid var(--base1);
+    padding-bottom: 0.5rem;
+}
+
+a {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+}
