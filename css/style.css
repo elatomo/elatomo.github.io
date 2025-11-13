@@ -28,6 +28,22 @@ body {
     color: var(--base03);
 }
 
+.language-switch {
+    text-align: right;
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+    color: var(--base03);
+}
+
+.language-switch a {
+    color: var(--base01);
+    text-decoration: none;
+}
+
+.language-switch a:hover {
+    color: var(--cyan);
+}
+
 .container {
     display: flex;
     flex-direction: column;
