@@ -21,7 +21,7 @@
 body {
     font-family: "Source Code Pro", "SF Mono", "Menlo", monospace;
     line-height: 1.6;
-    max-width: 700px;
+    max-width: 70ch;
     margin: 0 auto;
     padding: 2rem;
     background-color: var(--base3);
@@ -33,8 +33,8 @@ body {
     flex-direction: column;
     min-height: 70vh;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
 }
 
 h1 {
@@ -42,6 +42,7 @@ h1 {
     font-weight: normal;
     border-bottom: 1px solid var(--base1);
     padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 a {
@@ -52,4 +53,14 @@ a {
 a:hover {
     color: var(--orange);
     text-decoration: underline;
+}
+
+.about p {
+    margin: 0 0 1.2rem 0;
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+.about p:last-child {
+    margin-bottom: 0;
 }
