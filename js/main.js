@@ -49,6 +49,8 @@ Namespaces are one honking great idea -- let's do more of those!`;
     // Run only once
     if (!terminal.classList.contains("hidden")) return;
 
+    trigger.style.cursor = "default";
+
     terminal.innerHTML = `
       <div class="terminal-prompt">
         <span class="prompt-symbol">$</span>
