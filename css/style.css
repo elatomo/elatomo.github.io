@@ -99,3 +99,67 @@ a:hover {
     60% { transform: rotate(12deg) }
     80% { transform: rotate(0deg) }
 }
+
+.terminal {
+    font-size: 1.1em;
+    margin: 1.5rem 0;
+    color: var(--base00);
+    line-height: 1.4;
+    /* Override browser defaults for <code> */
+    font-family: inherit;
+}
+
+.terminal-prompt {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+.prompt-symbol {
+    margin-right: 1ch;
+}
+
+.repl-prompt-symbol {
+    color: var(--magenta);
+    margin-right: 1ch;
+}
+
+.cursor {
+    color: var(--magenta);
+    animation: none;
+    font-weight: bold;
+}
+
+.zen-content {
+    white-space: pre-line;
+}
+
+/* Ghost editing cursor for the Python trigger */
+.js-enabled .python-trigger {
+    position: relative;
+    cursor: pointer;
+}
+
+.js-enabled .python-trigger::before {
+    content: attr(data-cursor-char);
+    position: absolute;
+    top: 0;
+    left: var(--cursor-pos, 0ch);
+    width: 1ch;
+    height: 100%;
+    background: var(--yellow);
+    color: var(--base3);
+    opacity: 0;
+    pointer-events: none;
+    /* Perfect alignment with original text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.python-trigger.show-cursor::before {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
