@@ -1,4 +1,6 @@
-/* Solarized Light */
+/* ====================================
+   CSS Variables (Solarized Light Theme)
+   ==================================== */
 :root {
     --base03: #002b36;
     --base02: #073642;
@@ -18,6 +20,9 @@
     --green: #859900;
 }
 
+/* ====================================
+   Base Styles
+   ==================================== */
 body {
     font-family: "Source Code Pro", "SF Mono", "Menlo", monospace;
     line-height: 1.6;
@@ -28,6 +33,21 @@ body {
     color: var(--base03);
 }
 
+/* ====================================
+   Layout Components
+   ==================================== */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+}
+
+/* ====================================
+   Navigation & UI Elements
+   ==================================== */
 .language-switch {
     text-align: right;
     font-size: 0.9em;
@@ -44,15 +64,9 @@ body {
     color: var(--cyan);
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 70vh;
-    justify-content: center;
-    align-items: left;
-    text-align: left;
-}
-
+/* ====================================
+   Typography
+   ==================================== */
 h1 {
     color: var(--blue);
     font-weight: normal;
@@ -81,32 +95,15 @@ a:hover {
     margin-bottom: 0;
 }
 
-.wave {
-    animation-name: wave-animation;
-    animation-duration: 1.2s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1s;
-    animation-iteration-count: 2;
-    animation-fill-mode: forwards;
-    transform-origin: 75% 80%;
-    display: inline-block;
-}
-
-@keyframes wave-animation {
-    0%, 100% { transform: rotate(0deg) }
-    20% { transform: rotate(15deg) }
-    40% { transform: rotate(-8deg) }
-    60% { transform: rotate(12deg) }
-    80% { transform: rotate(0deg) }
-}
-
+/* ====================================
+   Python REPL Terminal
+   ==================================== */
 .terminal {
     font-size: 1.1em;
     margin: 1.5rem 0;
     color: var(--base00);
     line-height: 1.4;
-    /* Override browser defaults for <code> */
-    font-family: inherit;
+    font-family: inherit; /* Override browser defaults for <code> */
 }
 
 .terminal-prompt {
@@ -125,7 +122,7 @@ a:hover {
 
 .cursor {
     color: var(--magenta);
-    animation: none;
+    animation: none; /* Static cursor, no blinking */
     font-weight: bold;
 }
 
@@ -133,7 +130,9 @@ a:hover {
     white-space: pre-line;
 }
 
-/* Ghost editing cursor for the Python trigger */
+/* ====================================
+   Interactive Elements
+   ==================================== */
 .js-enabled .python-trigger {
     position: relative;
     cursor: pointer;
@@ -150,16 +149,34 @@ a:hover {
     color: var(--base3);
     opacity: 0;
     pointer-events: none;
-    /* Perfect alignment with original text */
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .python-trigger.show-cursor::before {
     opacity: 1;
 }
 
+/* ====================================
+   Animations
+   ==================================== */
+.wave {
+    animation: wave-animation 1.2s ease-in-out 1s 2 forwards;
+    transform-origin: 75% 80%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0%, 100% { transform: rotate(0deg) }
+    20% { transform: rotate(15deg) }
+    40% { transform: rotate(-8deg) }
+    60% { transform: rotate(12deg) }
+    80% { transform: rotate(0deg) }
+}
+
+/* ====================================
+   Utility Classes
+   ==================================== */
 .hidden {
     display: none;
 }
